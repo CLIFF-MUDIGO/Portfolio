@@ -113,6 +113,67 @@ a.anchor {
   display: -ms-flexbox;
   display:         flex;
 }
+/* Services Section Styles */
+#services {
+  padding: 50px 0;
+  background-color: #f5f5f5; /* Grey background color */
+  text-align: center; /* Center-align content */
+}
+
+.service-card {
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-bottom: 30px;
+  transition: transform 0.3s;
+  background-color: #fff; /* White background color to service cards */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow on hover */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-card:hover { 
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.service-icon {
+  background-color: #337ab7; /* Blue background color for icons */
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+/* Adjust the icon color */
+.service-icon i {
+  color: #fff; /* White icon color */
+  font-size: 24px;
+}
+
+.service-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333; /* Dark text color */
+}
+
+.service-description {
+  font-size: 16px;
+  color: #666; /* Slightly lighter text color */
+}
+
+/* Media Query for Smaller Devices */
+@media (max-width: 767px) {
+  .service-card {
+    margin-bottom: 20px;
+  }
+}
 
 #about{
   background-image: url(https://raw.githubusercontent.com/hash004/freecodecamp/master/portfolioPage/images/about.jpg);
