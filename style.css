@@ -25,6 +25,14 @@ a.anchor {
   text-transform: capitalize;
 }
 
+.navbar-nav li.active a {
+  background-color: #333;
+  color: #fff;
+  border-radius: 5px;
+  padding: 8px 15px;
+}
+
+
 #splash{
   background-image: url(https://raw.githubusercontent.com/hash004/freecodecamp/master/portfolioPage/images/home.jpg);
   background-size: cover;
@@ -116,8 +124,8 @@ a.anchor {
 /* Services Section Styles */
 #services {
   padding: 50px 0;
-  background-color: #f5f5f5; /* Grey background color */
-  text-align: center; /* Center-align content */
+  background-color: #f5f5f5;
+  text-align: center;
 }
 
 .service-card {
@@ -125,22 +133,22 @@ a.anchor {
   padding: 20px;
   margin-bottom: 30px;
   transition: transform 0.3s;
-  background-color: #fff; /* White background color to service cards */
-  border-radius: 10px; /* Rounded corners */
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow on hover */
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.service-card:hover { 
+.service-card:hover {
   transform: translateY(-5px);
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .service-icon {
-  background-color: #337ab7; /* Blue background color for icons */
+  background-color: #337ab7;
   border-radius: 50%;
   width: 70px;
   height: 70px;
@@ -148,11 +156,15 @@ a.anchor {
   align-items: center;
   justify-content: center;
   margin-bottom: 10px;
+  transition: background-color 0.3s;
 }
 
-/* Adjust the icon color */
+.service-icon:hover {
+  background-color: #286090;
+}
+
 .service-icon i {
-  color: #fff; /* White icon color */
+  color: #fff;
   font-size: 24px;
 }
 
@@ -160,13 +172,21 @@ a.anchor {
   font-size: 20px;
   font-weight: bold;
   margin-bottom: 10px;
-  color: #333; /* Dark text color */
+  color: #333;
+  display: none; /* Hide by default */
 }
 
 .service-description {
   font-size: 16px;
-  color: #666; /* Slightly lighter text color */
+  color: #666;
+  display: none; /* Hide by default */
 }
+
+.service-card:hover .service-title,
+.service-card:hover .service-description {
+  display: block; /* Show on hover */
+}
+
 
 /* Media Query for Smaller Devices */
 @media (max-width: 767px) {
