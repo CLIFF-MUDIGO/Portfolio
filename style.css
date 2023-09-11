@@ -196,27 +196,74 @@ a.anchor {
 
 
 /* Media Query for Smaller Devices */
-/* Media Query for Smaller Devices (Phones) */
+/* Media Query for Smaller Devices (e.g., phones) */
 @media (max-width: 767px) {
-  /* Adjustments for smaller screens go here */
-  body {
-    font-size: 16px; /* Example: adjust font size for smaller screens */
+  /* Navbar adjustments for smaller screens */
+  .navbar-brand {
+    font-size: 1.5em; /* Decrease font size for the brand */
   }
 
-  #splash {
-    font-size: 2em; /* Example: adjust font size for the splash section */
+  .navbar-nav li {
+    text-transform: lowercase; /* Adjust text transformation */
   }
 
+  /* Splash section adjustments */
+  #splash h1 {
+    font-size: 1.5em; /* Decrease font size */
+    padding-top: 10%; /* Adjust padding */
+    padding-bottom: 30px; /* Adjust padding */
+  }
+
+  /* Portfolio section adjustments */
   #portfolio h1 {
-    font-size: 3em; /* Example: adjust font size for the portfolio section */
+    font-size: 3em; /* Decrease font size */
   }
 
   .thumbnail img {
-    min-height: 150px; /* Example: adjust minimum image height for thumbnails */
-    min-width: 200px; /* Example: adjust minimum image width for thumbnails */
+    min-height: auto; /* Remove minimum height for images */
+    min-width: 100%; /* Ensure images scale with smaller screens */
   }
 
-  /* You can add more adjustments for smaller screens as needed */
+  /* About section adjustments */
+  #about h1 {
+    font-size: 3em; /* Decrease font size */
+  }
+
+  #about p {
+    font-size: 1em; /* Decrease font size */
+  }
+
+  #about img {
+    max-width: 100%; /* Ensure images scale with smaller screens */
+  }
+
+  /* Services section adjustments */
+  #services .service-card {
+    margin-bottom: 20px; /* Adjust margin for service cards */
+  }
+
+  /* Contact section adjustments */
+  #contact h1 {
+    font-size: 3em; /* Decrease font size */
+  }
+
+  #contact h2 {
+    font-size: 2em; /* Decrease font size */
+  }
+
+  #contact address {
+    font-size: 1em; /* Decrease font size */
+  }
+
+  /* Adjust other styles as needed for smaller screens */
+}
+
+
+ 
+
+/* Style for the spacing div */
+.section-spacing {
+  height: 100px; /* Adjust the height as needed */
 }
 
 #about{
