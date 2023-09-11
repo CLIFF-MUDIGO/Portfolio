@@ -196,10 +196,27 @@ a.anchor {
 
 
 /* Media Query for Smaller Devices */
+/* Media Query for Smaller Devices (Phones) */
 @media (max-width: 767px) {
-  .service-card {
-    margin-bottom: 20px;
+  /* Adjustments for smaller screens go here */
+  body {
+    font-size: 16px; /* Example: adjust font size for smaller screens */
   }
+
+  #splash {
+    font-size: 2em; /* Example: adjust font size for the splash section */
+  }
+
+  #portfolio h1 {
+    font-size: 3em; /* Example: adjust font size for the portfolio section */
+  }
+
+  .thumbnail img {
+    min-height: 150px; /* Example: adjust minimum image height for thumbnails */
+    min-width: 200px; /* Example: adjust minimum image width for thumbnails */
+  }
+
+  /* You can add more adjustments for smaller screens as needed */
 }
 
 #about{
