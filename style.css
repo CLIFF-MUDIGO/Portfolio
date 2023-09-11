@@ -1,39 +1,78 @@
+/* Import Google Fonts */
 @import url(https://fonts.googleapis.com/css?family=Dancing+Script|Ubuntu|Roboto:400,700);
 
-/*html, body{
-  height: 100%;
-}*/
+/* Reset some default styles for compatibility */
+body,
+html,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
 
-body{
+/* Apply a background image to the body */
+body {
   font-family: "Ubuntu", sans-serif;
 }
 
 a.anchor {
-    display: block;
-    position: relative;
-    top: -50px;
-    visibility: hidden;
+  display: block;
+  position: relative;
+  top: -50px;
+  visibility: hidden;
 }
 
-.navbar-brand{
+/* Style the navigation bar */
+.navbar {
+  background-color: #333;
+  border: none;
+  border-radius: 0;
+  margin-bottom: 0;
+}
+
+/* Style the navigation brand within the .navbar-header */
+.navbar-header .navbar-brand {
   font-family: "Dancing Script", cursive;
   font-weight: 700;
   font-size: 2em;
-}
-
-.navbar li{
-  text-transform: capitalize;
-}
-
-.navbar-nav li.active a {
-  background-color: #333;
-  color: #fff;
-  border-radius: 5px;
-  padding: 8px 15px;
+  color: gold; /* Goldish color for the brand */
 }
 
 
-#splash{
+/* Style the navigation links */
+.navbar-collapse ul.nav.navbar-nav li a {
+  color: white; /* White color for the links */
+  font-weight: bold;
+  font-size: 15px; /* Adjust font size as needed */
+  text-transform: uppercase; /* Convert text to uppercase */
+  margin: 0 15px; /* Add space between the links */
+  transition: color 0.3s; /* Smooth color transition on hover */
+}
+
+/* Style the active link */
+.navbar-collapse ul.nav.navbar-nav li.active a {
+  background-color: rgb(255, 255, 255); /* Background color for the active link */
+  color: #333; /* Text color for the active link */
+  border-radius: 5px; /* Rounded corners */
+  padding: 8px 15px; /* Add padding to the active link */
+}
+
+/* Change link color on hover */
+.navbar-collapse ul.nav.navbar-nav li a:hover {
+  color: rgba(255, 217, 0, 0.438); /* Change text color on hover */
+}
+
+
+/* Add padding to the splash section */
+#splash {
+  padding: 100px 0;
   background-image: url(https://raw.githubusercontent.com/hash004/freecodecamp/master/portfolioPage/images/home.jpg);
   background-size: cover;
   background-position: center;
@@ -48,97 +87,123 @@ a.anchor {
                0px 18px 23px rgba(0,0,0,0.1);
 }
 
-  #splash h1{
-    font-size: 2em;
-  }
+#splash h1 {
+  font-size: 2em;
+}
 
-  #splash a{
-    color: #fff;
-  }
+#splash a {
+  color: #fff;
+}
 
-  #splash a:hover{
-    color: #e7e7e7;
-  }
-  /* Custom CSS for Eye-Catching "I'm a" Text */
+#splash a:hover {
+  color: #e7e7e7;
+}
+
+/* Custom CSS for Eye-Catching "I'm a" Text */
 #splash .text {
   font-size: 1em;
   font-weight: bold;
   color: #abce12; /* Eye-catching color, you can adjust this */
 }
 
-
-#portfolio{
-  background-image: url(https://raw.githubusercontent.com/hash004/freecodecamp/master/portfolioPage/images/portfolio.jpg);
-  background-attachment: fixed;
-  background-size: cover;
+/* Style the about section with background image */
+#about {
+  background-image: url(https://raw.githubusercontent.com/hash004/freecodecamp/master/portfolioPage/images/about.jpg);
   background-position: center;
-  height: 100%;
-  padding-bottom: 50px;
+  background-size: cover;
+  background-color: #fff;
+  padding: 50px 0;
   color: #fff;
 }
 
-  #portfolio h1{
-    font-size: 5em;
-    text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
-                 0px 8px 13px rgba(0,0,0,0.5),
-                 0px 18px 23px rgba(0,0,0,0.1);
-  }
+#about h1 {
+  font-size: 5em;
+  text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+               0px 8px 13px rgba(0,0,0,0.5),
+               0px 18px 23px rgba(0,0,0,0.1);
+}
 
-.thumbnail{
+#about p {
+  font-size: 1.5em;
+  text-align: justify;
+}
+
+#about img {
+  padding: 10px;
+  /*max-width: 180px;*/
+}
+
+/* Style the portfolio section with background image */
+#portfolio {
+  background-color: #f0f0f0;
+  padding: 50px 0;
+  background-image: url(https://raw.githubusercontent.com/hash004/freecodecamp/master/portfolioPage/images/portfolio.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+#portfolio h1 {
+  font-size: 5em;
+  text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+               0px 8px 13px rgba(0,0,0,0.5),
+               0px 18px 23px rgba(0,0,0,0.1);
+}
+
+.thumbnail {
   position: relative;
 }
 
-  .thumbnail img{
-    min-height: 250px;
-    min-width: 300px;
-  }
+.thumbnail h3 {
+  font-size: 20px;
+  color: #333;
+}
 
-.thumbnail-hover{
+.thumbnail img {
+  min-height: 250px;
+  min-width: 300px;
+}
+
+.thumbnail-hover {
   position: absolute;
   top: 2px;
   left: 2px;
   height: 99%;
   width: 99%;
   opacity: 0;
-  transition:2s;
+  transition: 2s;
 }
 
-    .thumbnail-hover:hover{
-    top: 2px;
-    left: 2px;
-    position: absolute;
-    height: 99%;
-    width: 99%;
-    background-color: rgba(0,0,0,0.8);
-    margin: 0 auto;
-    transition:.5s;
-    opacity: 1;
-    padding-top: 30%;
-    border-radius: 5px;
-  }
-
-  .thumbnail-hover i{
-    text-decoration: none;
-    color: white;
-  }
-
-.row-eq-height {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display:         flex;
+.thumbnail-hover:hover {
+  top: 2px;
+  left: 2px;
+  position: absolute;
+  height: 99%;
+  width: 99%;
+  background-color: rgba(0,0,0,0.8);
+  margin: 0 auto;
+  transition: 0.5s;
+  opacity: 1;
+  padding-top: 30%;
+  border-radius: 5px;
 }
-/* Services Section Styles */
+
+.thumbnail-hover i {
+  text-decoration: none;
+  color: white;
+}
+
+/* Style the services section */
 #services {
+  background: color #f5f5f5;
   padding: 50px 0;
-  background-color: #f5f5f5;
   text-align: center;
 }
 
 .service-card {
   border: 1px solid #ddd;
   padding: 20px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   transition: transform 0.3s;
   background-color: #fff;
   border-radius: 10px;
@@ -166,10 +231,6 @@ a.anchor {
   transition: background-color 0.3s;
 }
 
-.service-icon:hover {
-  background-color: #286090;
-}
-
 .service-icon i {
   color: #fff;
   font-size: 24px;
@@ -183,6 +244,10 @@ a.anchor {
   display: none; /* Hide by default */
 }
 
+.service-icon:hover {
+  background-color: #286090;
+}
+
 .service-description {
   font-size: 16px;
   color: #666;
@@ -194,160 +259,118 @@ a.anchor {
   display: block; /* Show on hover */
 }
 
-
-/* Media Query for Smaller Devices */
-/* Media Query for Smaller Devices (e.g., phones) */
-@media (max-width: 767px) {
-  /* Navbar adjustments for smaller screens */
-  .navbar-brand {
-    font-size: 1.5em; /* Decrease font size for the brand */
-  }
-
-  .navbar-nav li {
-    text-transform: lowercase; /* Adjust text transformation */
-  }
-
-  /* Splash section adjustments */
-  #splash h1 {
-    font-size: 1.5em; /* Decrease font size */
-    padding-top: 10%; /* Adjust padding */
-    padding-bottom: 30px; /* Adjust padding */
-  }
-
-  /* Portfolio section adjustments */
-  #portfolio h1 {
-    font-size: 3em; /* Decrease font size */
-  }
-
-  .thumbnail img {
-    min-height: auto; /* Remove minimum height for images */
-    min-width: 100%; /* Ensure images scale with smaller screens */
-  }
-
-  /* About section adjustments */
-  #about h1 {
-    font-size: 3em; /* Decrease font size */
-  }
-
-  #about p {
-    font-size: 1em; /* Decrease font size */
-  }
-
-  #about img {
-    max-width: 100%; /* Ensure images scale with smaller screens */
-  }
-
-  /* Services section adjustments */
-  #services .service-card {
-    margin-bottom: 20px; /* Adjust margin for service cards */
-  }
-
-  /* Contact section adjustments */
-  #contact h1 {
-    font-size: 3em; /* Decrease font size */
-  }
-
-  #contact h2 {
-    font-size: 2em; /* Decrease font size */
-  }
-
-  #contact address {
-    font-size: 1em; /* Decrease font size */
-  }
-
-  /* Adjust other styles as needed for smaller screens */
-}
-
-
- 
-
-/* Style for the spacing div */
-.section-spacing {
-  height: 100px; /* Adjust the height as needed */
-}
-
-#about{
-  background-image: url(https://raw.githubusercontent.com/hash004/freecodecamp/master/portfolioPage/images/about.jpg);
-  background-position: center;
-  background-size: cover;
-  height: 100%;
-  padding-bottom: 50px;
-  color: #fff;
-}
-
-  #about h1{
-    font-size: 5em;
-    text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
-                 0px 8px 13px rgba(0,0,0,0.5),
-                 0px 18px 23px rgba(0,0,0,0.1);
-  }
-
-  #about p{
-    font-size: 1.5em;
-    text-align: justify;
-  }
-
-  #about img{
-    padding: 10px;
-    /*max-width: 180px;*/
-  }
-
-#white-bg{
-  /*background-color: rgba(0,0,0, 0.5);
-  border-radius: 20px;
-  margin-right: 10px;*/
-  float: left;
-  display: inline-block;
-  vertical-align: middle;
-  padding: 6% 2%;
-}
-
-#contact{
+/* Style the contact section with background image */
+#contact {
+  background-color: #f0f0f0;
+  padding: 50px 0;
   background-image: url(https://raw.githubusercontent.com/hash004/freecodecamp/master/portfolioPage/images/contact.jpg);
-  background-position: center;
   background-size: cover;
-  height: 100%;
-  padding-bottom: 50px;
+  background-position: center;
   color: #fff;
+  height: 100%;
 }
 
-  #contact h1{
-    font-size: 5em;
-    text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
-                 0px 8px 13px rgba(0,0,0,0.5),
-                 0px 18px 23px rgba(0,0,0,0.1);
+#contact h1 {
+  font-size: 5em;
+  text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+               0px 8px 13px rgba(0,0,0,0.5),
+               0px 18px 23px rgba(0,0,0,0.1);
+}
+
+/* Style the social icons in the contact section */
+#contact h2 {
+  text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+               0px 8px 13px rgba(0,0,0,0.5),
+               0px 18px 23px rgba(0,0,0,0.1);
+}
+
+/* Style the location address */
+address {
+  font-size: 1.5em;
+  color: #fff;
+  font-weight: bold;
+}
+
+#contact .fa-stack {
+  color: #333;
+}
+
+#contact .fa-stack:hover .fa-stack-1x {
+  color: #333;
+  transition: 0.5s;
+}
+
+#contact .fa-stack:hover .fa-stack-2x {
+  color: #fff;
+  transition: 0.5s;
+}
+
+#contact a {
+  text-decoration: none;
+}
+
+hr {
+  width: 25%;
+}
+
+/* Style the map iframe */
+.embed-responsive {
+  margin-top: 20px;
+}
+
+/* Responsive styles */
+@media (max-width: 767px) {
+  /* Adjust font sizes and padding for smaller screens */
+  #splash h1 {
+    font-size: 28px;
   }
 
-  #contact h2{
-    text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
-                 0px 8px 13px rgba(0,0,0,0.5),
-                 0px 18px 23px rgba(0,0,0,0.1);
+  #splash p a {
+    font-size: 20px;
   }
 
-  #contact address{
-    font-size: 1.5em;
+  /* Make the navigation bar collapse for smaller screens */
+  .navbar-toggle {
+    background-color: #333;
+  }
+
+  .navbar-toggle .icon-bar {
+    background-color: #fff;
+  }
+
+  .navbar-collapse {
+    background-color: #333;
+    padding: 20px;
+  }
+
+  .navbar-nav > li > a {
     color: #fff;
     font-weight: bold;
+    margin: 10px 0;
   }
 
-  #contact .fa-stack{
-    color: #333;
+  /* Adjust padding for the splash section on smaller screens */
+  #splash {
+    padding: 50px 0;
   }
 
-  #contact .fa-stack:hover .fa-stack-1x{
-    color: #333;
-    transition: 0.5s;
+  /* Adjust padding for the about section on smaller screens */
+  #about {
+    padding: 30px 0;
   }
 
-  #contact .fa-stack:hover .fa-stack-2x{
-    color: #fff;
-    transition: 0.5s;
+  /* Adjust padding for the portfolio section on smaller screens */
+  #portfolio {
+    padding: 30px 0;
   }
 
-  #contact a{
-    text-decoration: none;
+  /* Adjust padding for the services section on smaller screens */
+  #services {
+    padding: 30px 0;
   }
 
-hr{
-  width: 25%;
+  /* Adjust padding for the contact section on smaller screens */
+  #contact {
+    padding: 30px 0;
+  }
 }
